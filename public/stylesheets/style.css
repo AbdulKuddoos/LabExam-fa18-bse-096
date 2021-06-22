@@ -1,8 +1,24 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: antiquewhite;
+}
+
+#outer {
+  background-color: #f8fad7;
+  padding: 1%;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+#phone-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
