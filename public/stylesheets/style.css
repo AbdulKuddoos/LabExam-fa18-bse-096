@@ -4,6 +4,10 @@ body {
   background-color: antiquewhite;
 }
 
+.checked {
+  color: orange;
+}
+
 #outer {
   background-color: #f8fad7;
   padding: 1%;

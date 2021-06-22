@@ -49,6 +49,6 @@ mongoose
       useUnifiedTopology: true,
     }
   )
-  .then(() => console.log("Connected to Mongo...."))
+  .then(() => console.log("Connected to Online Mongodb"))
   .catch((error) => console.log(error.message));
 module.exports = app;

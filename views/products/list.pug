@@ -12,12 +12,21 @@ block content
             tr
                 th Name
                 th Price
+                th Descriptions
+                th Ratings
                 th Actions
         tbody
             each product in products
                 tr
                     td=product.name
                     td=product.price
+                    td=product.description
+                    td
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
                     td
                         a(href="/products/delete/"+product._id, class="btn btn-danger m-1") Delete
                         a(href="/products/edit/"+product._id, class="btn btn-warning m-1") Edit
