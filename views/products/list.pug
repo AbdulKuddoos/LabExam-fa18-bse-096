@@ -1,5 +1,7 @@
 extends ../layout
 
+
+
 block content
     .row
         .col-sm-8
@@ -22,11 +24,10 @@ block content
                     td=product.price
                     td=product.description
                     td
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
+                        -var n = 0
+                        while n < product.rating
+                            <span class="fa fa-star checked"></span> 
+                            - ++n
                     td
                         a(href="/products/delete/"+product._id, class="btn btn-danger m-1") Delete
                         a(href="/products/edit/"+product._id, class="btn btn-warning m-1") Edit

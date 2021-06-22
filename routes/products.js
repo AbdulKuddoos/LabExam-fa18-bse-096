@@ -13,7 +13,11 @@ router.get("/add", checkSessionAuth, async function (req, res, next) {
 });
 // store data in db
 router.post("/add", async function (req, res, next) {
-  let product = new Product(req.body);
+  let product = new Product();
+  product.name = req.body.name;
+  product.price = req.body.price;
+  product.description = req.body.description;
+  product.rating = req.body.rate;
   await product.save();
   res.redirect("/products");
 });
@@ -49,6 +53,7 @@ router.post("/edit/:id", async function (req, res, next) {
   product.name = req.body.name;
   product.price = req.body.price;
   product.description = req.body.description;
+  product.rating = req.body.rate;
   await product.save();
   res.redirect("/products");
 });
